@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig(({ mode } ) => ({
   // This base path is CRITICAL for GitHub Pages deployment.
   // Replace REPO_NAME with the name of your GitHub repository.
-  base: "/company/",
+  base: "/com/",
 
   // The server block is useful for local development.
   server: {
