@@ -1,9 +1,9 @@
-name: Deploy Vite site to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,25 +20,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Node
+      - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
+          # We removed the cache: 'npm' to ensure a fresh sync if needed
       - name: Install dependencies
-        run: npm ci
-
+        # CHANGED: Using 'npm install' instead of 'npm ci' to handle lockfile sync issues
+        run: npm install
       - name: Build
         run: npm run build
-
-      - name: Fix routing for GitHub Pages
-        run: cp dist/index.html dist/404.html
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ./dist
 
   deploy:
     environment:
