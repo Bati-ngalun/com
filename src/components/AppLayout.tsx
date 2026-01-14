@@ -853,7 +853,7 @@ const ProjectsPage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ se
   const categories = [{ id: 'all', name: 'All Projects' }, { id: 'water', name: 'Water Projects' }, { id: 'realestate', name: 'Real Estate' }, { id: 'agriculture', name: 'Agriculture' }, { id: 'social', name: 'Social Impact' }];
 
   const projects = [
-    { id: 1, title: 'Bati-Ngalun Ecovillage', category: 'realestate', image: IMAGES.ecovillage1, location: 'Greater Banjul Area', timeline: '2023 - Ongoing', description: 'Sustainable community with 50+ eco-friendly housing units.', impact: '200+ residents' },
+    { id: 1, title: 'Bati-Ngalun Ecovillage', category: 'realestate', image: IMAGES.ecovillage1, location: 'Marakissa', timeline: '2023 - Ongoing', description: 'Sustainable community with 50+ eco-friendly housing units.', impact: '200+ residents' },
     { id: 2, title: 'The Irrigation House – Gambia', category: 'agriculture', image: IMAGES.irrigation2, location: 'Brikama', timeline: '2025 - 2030', description: ' Retail enterprice for the importation of agricultural and irrigation materials.', impact: '200+ farmers trained' },
     { id: 3, title: 'Civil Service Drilling Project 2026', category: 'water', image: IMAGES.borehole1, location: 'Multiple Locations', timeline: '2025 - 2026', description: 'Large-scale borehole drilling for civil servants.', impact: '300+ civil servants' },
     { id: 4, title: 'Kerewan Community Water Project', category: 'water', image: IMAGES.borehole2, location: 'North Bank Region', timeline: '2023', description: 'Clean water for 500+ residents.', impact: '500+ people' },
@@ -930,7 +930,7 @@ const CareersPage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
   const [expandedJob, setExpandedJob] = useState<number | null>(null);
 
   const jobs = [
-    { id: 1, title: 'Water Engineer', department: 'Waterworks', location: 'Banjul', type: 'Full-time', description: 'Lead borehole drilling projects and water system installations.' },
+    { id: 1, title: 'Agronomist', department: 'Agronomist expert', location: 'Banjul', type: 'Full-time', description: 'Agronomist to support farming operations.' },
     { id: 2, title: 'Project Manager', department: 'Operations', location: 'Banjul', type: 'Full-time', description: 'Coordinate waterworks, real estate, and agricultural projects.' },
     { id: 3, title: 'Agricultural Technician', department: 'Agriculture', location: 'Central River Region', type: 'Full-time', description: 'Help farmers implement modern irrigation systems.' },
     { id: 4, title: 'Community Outreach Officer', department: 'Foundation', location: 'Multiple Locations', type: 'Full-time', description: 'Engage with communities and coordinate foundation programs.' },
@@ -1043,7 +1043,7 @@ const ContactPage: React.FC = () => {
     { icon: Phone, title: 'Phone Numbers', details: ['+220 731 1727', '+220 216 7819', '+220 682 2093'], action: 'tel:+2207311727', actionText: 'Call Now' },
     { icon: MessageCircle, title: 'WhatsApp', details: ['+220 731 1727'], action: 'https://wa.me/2207311727', actionText: 'Chat Now' },
     { icon: Mail, title: 'Email', details: ['contact@bati-ngalun.com'], action: 'mailto:contact@bati-ngalun.com', actionText: 'Send Email' },
-    { icon: MapPin, title: 'Office Location', details: ['Banjul, The Gambia', 'West Africa'], action: 'https://maps.google.com/?q=Banjul,Gambia', actionText: 'Get Directions' },
+    { icon: MapPin, title: 'Office Location', details: ['Marakissa Village, Banjul, The Gambia', 'West Africa'], action: 'https://maps.google.com/?q=Banjul,Gambia', actionText: 'Get Directions' },
   ];
 
   return (
