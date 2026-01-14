@@ -77,7 +77,7 @@ const Header: React.FC<{ currentPage: string; setCurrentPage: (page: string) => 
             <a href="https://wa.me/2207311727" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#25D366] text-white rounded-full hover:bg-[#1da851] transition-colors" title="WhatsApp">
               <MessageCircle className="h-5 w-5" />
             </a>
-            <a href="https://facebook.com/batingalun" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#1877F2] text-white rounded-full hover:bg-[#0d65d9] transition-colors" title="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61573851003982" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#1877F2] text-white rounded-full hover:bg-[#0d65d9] transition-colors" title="Facebook">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
               </svg>
@@ -137,7 +137,7 @@ const Footer: React.FC<{ setCurrentPage: (page: string) => void }> = ({ setCurre
             </div>
             <p className="text-gray-300 text-sm mb-4">A legally registered social enterprise in The Gambia, providing sustainable water, real estate, and agricultural solutions for Africa.</p>
             <div className="flex space-x-3">
-              <a href="https://facebook.com/batingalun" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#1877F2] rounded-full hover:bg-[#0d65d9] transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61573851003982" target="_blank" rel="noopener noreferrer" className="p-2 bg-[#1877F2] rounded-full hover:bg-[#0d65d9] transition-colors">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
@@ -253,7 +253,7 @@ const HomePage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ setCur
   const [impactAnimated, setImpactAnimated] = useState(false);
 
   const heroSlides = [
-    { image: IMAGES.hero, title: 'Sustainable Water Solutions', subtitle: 'Providing clean water access to communities across The Gambia' },
+    { image: IMAGES.hero, title: 'Sustainable Water Solutions', subtitle: 'Providing clean water access to communities across The Gambia and the sub-region' },
     { image: IMAGES.ecovillage1, title: 'Eco-Village Development', subtitle: 'Building sustainable communities for a better future' },
     { image: IMAGES.irrigation1, title: 'Agricultural Innovation', subtitle: 'Empowering farmers with modern irrigation solutions' },
   ];
@@ -412,7 +412,7 @@ const HomePage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ setCur
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Impact</h2>
-            <p className="text-lg text-white/80">Making a measurable difference in communities across The Gambia</p>
+            <p className="text-lg text-white/80">Making a measurable difference in communities across The Gambia and the sub-region</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {impactStats.map((stat, index) => (
@@ -854,11 +854,11 @@ const ProjectsPage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ se
 
   const projects = [
     { id: 1, title: 'Bati-Ngalun Ecovillage', category: 'realestate', image: IMAGES.ecovillage1, location: 'Greater Banjul Area', timeline: '2023 - Ongoing', description: 'Sustainable community with 50+ eco-friendly housing units.', impact: '200+ residents' },
-    { id: 2, title: 'The Irrigation House – Gambia', category: 'agriculture', image: IMAGES.irrigation2, location: 'Central River Region', timeline: '2022 - 2024', description: 'State-of-the-art irrigation demonstration center.', impact: '500+ farmers trained' },
-    { id: 3, title: 'Civil Service Drilling Project 2026', category: 'water', image: IMAGES.borehole1, location: 'Multiple Locations', timeline: '2025 - 2026', description: 'Large-scale borehole drilling for government institutions.', impact: '25+ institutions' },
+    { id: 2, title: 'The Irrigation House – Gambia', category: 'agriculture', image: IMAGES.irrigation2, location: 'Brikama', timeline: '2025 - 2030', description: ' Retail enterprice for the importation of agricultural and irrigation materials.', impact: '200+ farmers trained' },
+    { id: 3, title: 'Civil Service Drilling Project 2026', category: 'water', image: IMAGES.borehole1, location: 'Multiple Locations', timeline: '2025 - 2026', description: 'Large-scale borehole drilling for civil servants.', impact: '300+ civil servants' },
     { id: 4, title: 'Kerewan Community Water Project', category: 'water', image: IMAGES.borehole2, location: 'North Bank Region', timeline: '2023', description: 'Clean water for 500+ residents.', impact: '500+ people' },
-    { id: 5, title: 'Youth Skills Training Center', category: 'social', image: IMAGES.community2, location: 'Banjul', timeline: '2022 - Ongoing', description: 'Vocational training facility for young Gambians.', impact: '200+ youth trained' },
-    { id: 6, title: 'Sustainable Housing Development', category: 'realestate', image: IMAGES.ecovillage2, location: 'Kombo South', timeline: '2024 - Ongoing', description: 'Affordable eco-friendly housing project.', impact: '30 housing units' },
+    { id: 5, title: 'Youth Skills Training Center', category: 'social', image: IMAGES.community2, location: 'Banjul', timeline: '2022 - Ongoing', description: 'Vocational training facility for young Gambians.', impact: '50+ youth trained' },
+    { id: 6, title: 'Sustainable Housing Development', category: 'realestate', image: IMAGES.ecovillage2, location: 'Multiple Locations', timeline: '2024 - Ongoing', description: 'Affordable eco-friendly housing project.', impact: '30 housing units' },
   ];
 
   const filteredProjects = activeFilter === 'all' ? projects : projects.filter(p => p.category === activeFilter);
