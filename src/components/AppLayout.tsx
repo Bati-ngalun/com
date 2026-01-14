@@ -268,14 +268,14 @@ const HomePage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ setCur
   const featuredProjects = [
     { image: IMAGES.ecovillage2, title: 'Bati-Ngalun Ecovillage', category: 'Real Estate', description: 'Sustainable community with eco-friendly housing and integrated water systems.' },
     { image: IMAGES.irrigation2, title: 'Irrigation House – Gambia', category: 'Agriculture', description: 'State-of-the-art irrigation demonstration center.' },
-    { image: IMAGES.borehole1, title: 'Civil Service Drilling Project 2026', category: 'Waterworks', description: 'Large-scale borehole drilling for government institutions.' },
+    { image: IMAGES.borehole1, title: 'Civil Service Drilling Project 2026', category: 'Waterworks', description: 'Large-scale borehole drilling for civil servants.' },
   ];
 
   const impactStats = [
-    { value: 150, suffix: '+', label: 'Communities Served', icon: Users },
-    { value: 85, suffix: '+', label: 'Projects Completed', icon: CheckCircle },
-    { value: 50000, suffix: '+', label: 'People Impacted', icon: Heart },
-    { value: 25, suffix: '+', label: 'Locations', icon: MapPin },
+    { value: 50, suffix: '+', label: 'Communities Served', icon: Users },
+    { value: 500, suffix: '+', label: 'Projects Completed', icon: CheckCircle },
+    { value: 10000, suffix: '+', label: 'People Impacted', icon: Heart },
+    { value: 200, suffix: '+', label: 'Locations', icon: MapPin },
   ];
 
   useEffect(() => {
@@ -307,7 +307,7 @@ const HomePage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ setCur
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-                Sustainable Water, Real Estate & Agriculture Solutions for Africa
+                Sustainable Water, Real Estate & Agricultural Solutions for Africa
               </h1>
               <p className="text-lg md:text-xl text-gray-200 mb-8">
                 Bati-Ngalun Company Limited is a trusted Gambian social enterprise delivering innovative solutions for communities and national development.
@@ -484,7 +484,7 @@ const AboutPage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ setCu
                 We are dedicated to providing sustainable solutions in waterworks, real estate, and agriculture while making a positive social impact through our foundation.
               </p>
               <p className="text-gray-600">
-                As a social enterprise, we reinvest our profits into community development programs, youth training initiatives, and environmental restoration projects.
+                As a social enterprise, we reinvest part of our profits into community development programs, youth training initiatives, and environmental restoration projects.
               </p>
             </div>
             <div className="relative">
@@ -550,7 +550,7 @@ const AboutPage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ setCu
               <img src={IMAGES.team} alt="Leadership Team" className="w-full h-64 md:h-80 object-cover" />
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Leadership Team</h3>
-                <p className="text-gray-600">Our leadership team brings together decades of experience in engineering, business development, community engagement, and social enterprise management. United by a shared vision of sustainable development, they guide Bati-Ngalun's strategic direction.</p>
+                <p className="text-gray-600">Our leadership team brings together over a decade of experience in engineering, business development, community engagement, and social enterprise management. United by a shared vision of sustainable development, they guide Bati-Ngalun's strategic direction.</p>
               </div>
             </div>
           </div>
@@ -766,9 +766,9 @@ const AgriculturePage: React.FC<{ setCurrentPage: (page: string) => void }> = ({
 // Foundation Page
 const FoundationPage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ setCurrentPage }) => {
   const programs = [
-    { icon: Droplets, title: 'Community Water Access Programs', description: 'Providing clean water to underserved communities.', impact: '50+ communities served' },
+    { icon: Droplets, title: 'Community Water Access Programs', description: 'Providing clean water to underserved communities.', impact: '25+ communities served' },
     { icon: Leaf, title: 'Environmental Restoration', description: 'Tree planting and watershed protection initiatives.', impact: '10,000+ trees planted' },
-    { icon: Users, title: 'Youth Training & Skills Development', description: 'Vocational training programs for young Gambians.', impact: '200+ youth trained' },
+    { icon: Users, title: 'Youth Training & Skills Development', description: 'Vocational training programs for young Gambians.', impact: '50+ youth trained' },
     { icon: Utensils, title: 'Food Security Projects', description: 'Supporting smallholder farmers with irrigation and training.', impact: '100+ farmers supported' },
   ];
 
@@ -783,7 +783,7 @@ const FoundationPage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ 
                 <span className="text-lg font-medium">Bati-Ngalun Foundation</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Social Enterprise for Community Impact</h1>
-              <p className="text-xl text-white/90 mb-8">As a registered social enterprise, we reinvest our profits into community development programs.</p>
+              <p className="text-xl text-white/90 mb-8">As a registered social enterprise, we reinvest part of our profits into community development programs.</p>
               <div className="flex flex-wrap gap-4">
                 <button onClick={() => setCurrentPage('contact')} className="inline-flex items-center px-6 py-3 bg-white text-rose-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">Partner With Us</button>
                 <a href="https://wa.me/2207311727?text=Hello,%20I%20am%20interested%20in%20supporting%20the%20Bati-Ngalun%20Foundation." target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-[#25D366] text-white font-semibold rounded-lg hover:bg-[#1da851] transition-colors">Contact Foundation</a>
