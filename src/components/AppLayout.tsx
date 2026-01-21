@@ -931,8 +931,7 @@ const CareersPage: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
 
   const jobs = [
     { id: 1, title: 'Agronomist', department: 'Agronomist expert', location: 'Banjul', type: 'Full-time', description: 'Agronomist to support farming operations.' },
-    { id: 2, title: 'Marketing Officer', department: 'Sales', location: 'Marakissa', type: 'Full-time', description: '**Key Responsibilities (Summary for Website):**
-      Promote company services across waterworks, real estate, and agriculture by implementing effective marketing strategies and managing social media platforms.
+    { id: 2, title: 'Marketing Officer', department: 'Sales', location: 'Marakissa', type: 'Full-time', description: 'Promote company services across waterworks, real estate, and agriculture by implementing effective marketing strategies and managing social media platforms.
       Create engaging content, respond to client inquiries, support sales activities, and contribute to branding, promotions, and community outreach initiatives.
     .' },
     { id: 3, title: 'Agricultural Technician', department: 'Agriculture', location: 'Central River Region', type: 'Full-time', description: 'Help farmers implement modern irrigation systems.' },
