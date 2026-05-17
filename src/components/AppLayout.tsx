@@ -1755,7 +1755,7 @@ const FoundationPage: React.FC<{
 						</div>
 						<div>
 							<img
-								src={ps.get("foundation", "hero_image", IMAGES.community1)}
+								src={ps.get("foundation", "hero_image", IMAGES.about1)}
 								alt="Community Impact"
 								className="rounded-xl shadow-2xl"
 							/>
