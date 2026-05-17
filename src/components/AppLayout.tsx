@@ -1087,7 +1087,7 @@ const AboutPage: React.FC<{
 						</div>
 						<div className="relative">
 							<img
-								src={ps.get("about", "hero_image", IMAGES.about1)}
+								src={ps.get("about", "hero_image", IMAGES.community1)}
 								alt="About us"
 								className="rounded-xl shadow-lg"
 							/>
