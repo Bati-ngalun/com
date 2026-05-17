@@ -73,6 +73,8 @@ const IMAGES = {
 	agriculture4:
 		"https://ousrwhwfrwlrnheoavzk.supabase.co/storage/v1/object/public/blog-images/1770532379503-seedlings2.jpeg",
 	about1: "/images/about1.jpg",
+	community1:
+		"https://ousrwhwfrwlrnheoavzk.supabase.co/storage/v1/object/public/blog-images/1769750135779-WhatsApp_Image_2026-01-24_at_1.39.45_PM.jpeg",
 	community2:
 		"https://ousrwhwfrwlrnheoavzk.supabase.co/storage/v1/object/public/blog-images/1769750136794-WhatsApp_Image_2026-01-24_at_1.39.47_PM__1_.jpeg",
 	community3:
@@ -1755,7 +1757,7 @@ const FoundationPage: React.FC<{
 						</div>
 						<div>
 							<img
-								src={ps.get("foundation", "hero_image", IMAGES.about1)}
+								src={ps.get("foundation", "hero_image", IMAGES.community1)}
 								alt="Community Impact"
 								className="rounded-xl shadow-2xl"
 							/>

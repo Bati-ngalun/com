@@ -1,48 +1,76 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-66DQK6YML2"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+	<head>
+		<!-- GitHub Pages SPA routing — must be first -->
+		<script>
+			(function () {
+				var m = window.location.search.match(/[?&]redirect=([^&]+)/);
+				if (m) window.history.replaceState(null, "", decodeURIComponent(m[1]));
+			})();
+		</script>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-66DQK6YML2"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-      gtag('config', 'G-66DQK6YML2');
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Optimized Title: Includes key services and location -->
-    <title>Bati-Ngalun | Sustainable Water, Real Estate & Agriculture in The Gambia</title>
-    
-    <!-- Optimized Description: Clear, keyword-rich summary of what you do -->
-    <meta name="description" content="Bati-Ngalun Company Limited provides professional borehole drilling, solar irrigation systems, and sustainable real estate development in The Gambia and West Africa." />
-    
-    <!-- Keywords: Helps search engines categorize your business -->
-    <meta name="keywords" content="borehole drilling Gambia, solar water pumps, irrigation systems, eco-village Gambia, sustainable agriculture, Bati-Ngalun" />
-    
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    
-    <!-- Social Media (Open Graph): Makes your links look professional when shared on WhatsApp/Facebook -->
-    <meta property="og:title" content="Bati-Ngalun Company Limited | Sustainable Solutions for Africa" />
-    <meta property="og:description" content="Leading Gambian social enterprise specializing in waterworks, eco-friendly housing, and modern agricultural solutions." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.bati-ngalun.com/" />
-    <meta property="og:image" content="/og.jpg" />
-    
-    <!-- Twitter/X Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bati-Ngalun Company Limited" />
-    <meta name="twitter:description" content="Sustainable water and agricultural solutions in The Gambia." />
-    <meta name="twitter:image" content="/og.jpg" />
+			gtag("config", "G-66DQK6YML2");
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Canonical Tag: Tells Google this is the main version of your site -->
-    <link rel="canonical" href="https://www.bati-ngalun.com/" />
-  </head>
-  <body>
-    <div id="root"></div> 
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+		<!-- Optimized Title: Includes key services and location -->
+		<title>
+			Bati-Ngalun | Sustainable Water, Real Estate & Agriculture in The Gambia
+		</title>
+
+		<!-- Optimized Description: Clear, keyword-rich summary of what you do -->
+		<meta
+			name="description"
+			content="Bati-Ngalun Company Limited provides professional borehole drilling, solar irrigation systems, and sustainable real estate development in The Gambia and West Africa."
+		/>
+
+		<!-- Keywords: Helps search engines categorize your business -->
+		<meta
+			name="keywords"
+			content="borehole drilling Gambia, solar water pumps, irrigation systems, eco-village Gambia, sustainable agriculture, Bati-Ngalun"
+		/>
+
+		<link rel="icon" type="image/png" href="/favicon.png" />
+
+		<!-- Social Media (Open Graph): Makes your links look professional when shared on WhatsApp/Facebook -->
+		<meta
+			property="og:title"
+			content="Bati-Ngalun Company Limited | Sustainable Solutions for Africa"
+		/>
+		<meta
+			property="og:description"
+			content="Leading Gambian social enterprise specializing in waterworks, eco-friendly housing, and modern agricultural solutions."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.bati-ngalun.com/" />
+		<meta property="og:image" content="/og.jpg" />
+
+		<!-- Twitter/X Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Bati-Ngalun Company Limited" />
+		<meta
+			name="twitter:description"
+			content="Sustainable water and agricultural solutions in The Gambia."
+		/>
+		<meta name="twitter:image" content="/og.jpg" />
+
+		<!-- Canonical Tag: Tells Google this is the main version of your site -->
+		<link rel="canonical" href="https://www.bati-ngalun.com/" />
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
 </html>
