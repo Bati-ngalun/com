@@ -51,6 +51,7 @@ const IMAGES = {
 	logo: "https://d64gsuwffb70l.cloudfront.net/6891fba9e84754e0b0fc9f86_1768205885796_f2d4cfcb.jpg",
 	hero: "https://d64gsuwffb70l.cloudfront.net/6964af716e2480dea2a3526a_1768206314660_a8c14b6c.jpg",
 	waterHompage1: "/images/waterHompage1.jpeg",
+	borehole1: "https://ousrwhwfrwlrnheoavzk.supabase.co/storage/v1/object/public/blog-images/1769749774422-WhatsApp_Image_2026-01-24_at_1.37.05_PM.jpeg",
 	borehole2:
 		"https://ousrwhwfrwlrnheoavzk.supabase.co/storage/v1/object/public/blog-images/1769749773474-WhatsApp_Image_2026-01-24_at_1.37.05_PM__3_.jpeg",
 	waterworks3:
@@ -1312,7 +1313,7 @@ const WaterworksPage: React.FC<{
 						</div>
 						<div>
 							<img
-								src={ps.get("waterworks", "hero_image", IMAGES.waterHompage1)}
+								src={ps.get("waterworks", "hero_image", IMAGES.borehole1)}
 								alt="Borehole Drilling"
 								className="rounded-xl shadow-2xl"
 							/>
