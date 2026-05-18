@@ -67,6 +67,7 @@ const IMAGES = {
 	ecovillage3:
 		"https://ousrwhwfrwlrnheoavzk.supabase.co/storage/v1/object/public/blog-images/1769749188424-WhatsApp_Image_2026-01-24_at_1.37.33_PM.jpeg",
 	agricHompage1: "/images/agricHompage1.jpg",
+	irrigation1: "https://ousrwhwfrwlrnheoavzk.supabase.co/storage/v1/object/public/blog-images/1770537226868-seedlings1.jpeg",
 	irrigation2:
 		"https://ousrwhwfrwlrnheoavzk.supabase.co/storage/v1/object/public/blog-images/1769991445202-irrigation_house.jpeg",
 	irrigation3:
