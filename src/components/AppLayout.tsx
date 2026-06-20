@@ -743,7 +743,7 @@ const HomePage: React.FC<{
 							src={slide.image}
 							alt={slide.title}
 							/* Changed h-auto to h-full and object-contain to object-cover */
-							className="w-full h-full object-cover object-[50%_50%]"
+							className="w-full h-full object-cover object-top"
 						/>
 						{/* The gradient overlay below ensures your white text remains readable over the image */}
 						<div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
