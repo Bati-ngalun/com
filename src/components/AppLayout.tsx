@@ -49,7 +49,7 @@ import {
 // Image URLs
 const IMAGES = {
 	logo: "https://d64gsuwffb70l.cloudfront.net/6891fba9e84754e0b0fc9f86_1768205885796_f2d4cfcb.jpg",
-	hero3: `${import.meta.env.BASE_URL}images/home.jpeg`,
+	home: `${import.meta.env.BASE_URL}images/home.jpeg`,
 	waterHompage1: "/images/waterHompage1.jpeg",
 	borehole1: "https://ousrwhwfrwlrnheoavzk.supabase.co/storage/v1/object/public/blog-images/1769749774422-WhatsApp_Image_2026-01-24_at_1.37.05_PM.jpeg",
 	borehole2:
