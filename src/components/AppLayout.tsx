@@ -733,7 +733,7 @@ const HomePage: React.FC<{
 	return (
 		<div>
 			{/* Hero Section */}
-			<section className="relative h-[500px] lg:h-[600px] overflow-hidden">
+			<section className="relative h-[600px] lg:h-[700px] overflow-hidden">
 				{heroSlides.map((slide, index) => (
 					<div
 						key={index}
