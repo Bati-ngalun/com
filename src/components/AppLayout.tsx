@@ -893,7 +893,7 @@ const HomePage: React.FC<{
 									<img
 										src={project.image}
 										alt={project.title}
-										className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+										className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
 									/>
 									<span className="absolute top-4 left-4 px-3 py-1 bg-[#0077BE] text-white text-xs font-medium rounded-full">
 										{project.category}
