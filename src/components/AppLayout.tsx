@@ -2414,8 +2414,8 @@ const ContactPage: React.FC<{
 		{
 			icon: Mail,
 			title: "Email",
-			details: ["admin@bati-ngalun.com"],
-			action: "mailto:admin@bati-ngalun.com",
+			details: ["batingalunceo@gmail.com"],
+			action: "mailto:batingalunceo@gmail.com",
 			actionText: "Send Email",
 		},
 		{
