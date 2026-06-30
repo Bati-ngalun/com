@@ -378,16 +378,16 @@ const Footer: React.FC<{ setCurrentPage: (page: string) => void }> = ({
 							<li className="flex items-center space-x-3">
 								<Mail className="h-5 w-5 text-[#4A90E2] flex-shrink-0" />
 								<a
-									href="mailto:contact@bati-ngalun.com"
+									href="mailto:batingalunceo@gmail.com"
 									className="text-gray-300 hover:text-white text-sm"
 								>
-									admin@bati-ngalun.com
+									batingalunceo@gmail.com
 								</a>
 							</li>
 							<li className="flex items-start space-x-3">
 								<MapPin className="h-5 w-5 text-[#4A90E2] flex-shrink-0 mt-0.5" />
 								<span className="text-gray-300 text-sm">
-									Marakissa, The Gambia
+									Brikama Nyambai, The Gambia
 									<br />
 									West Africa
 								</span>
@@ -2421,8 +2421,8 @@ const ContactPage: React.FC<{
 		{
 			icon: MapPin,
 			title: "Office Location",
-			details: ["Marakissa, The Gambia", "West Africa"],
-			action: "https://maps.google.com/?q=Marakissa,Gambia",
+			details: ["Brikama Nyambai Opposit Jah Oil, The Gambia", "West Africa"],
+			action: "https://maps.google.com/?q=Brikama Nyambai,Gambia",
 			actionText: "Get Directions",
 		},
 	];
@@ -2713,7 +2713,7 @@ const ContactPage: React.FC<{
 							Our Location
 						</h2>
 						<p className="text-gray-600">
-							Visit us at our office in Marakissa, Kombo Central, West Coast
+							Visit us at our office in Brikama Nyambai, West Coast
 							Region, The Gambia
 						</p>
 					</div>
