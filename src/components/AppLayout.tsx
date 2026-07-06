@@ -378,10 +378,10 @@ const Footer: React.FC<{ setCurrentPage: (page: string) => void }> = ({
 							<li className="flex items-center space-x-3">
 								<Mail className="h-5 w-5 text-[#4A90E2] flex-shrink-0" />
 								<a
-									href="mailto:batingalunceo@gmail.com"
+									href="mailto:batingalunadmin@gmail.com"
 									className="text-gray-300 hover:text-white text-sm"
 								>
-									batingalunceo@gmail.com
+									batingalunadmin@gmail.com
 								</a>
 							</li>
 							<li className="flex items-start space-x-3">
@@ -2414,8 +2414,8 @@ const ContactPage: React.FC<{
 		{
 			icon: Mail,
 			title: "Email",
-			details: ["batingalunceo@gmail.com"],
-			action: "mailto:batingalunceo@gmail.com",
+			details: ["batingalunadmin@gmail.com"],
+			action: "mailto:batingalunadmin@gmail.com",
 			actionText: "Send Email",
 		},
 		{
