@@ -28,6 +28,7 @@ const PROJECT_CATEGORIES = [
   { id: 'realestate',  label: 'Real Estate',     color: 'bg-amber-600' },
   { id: 'agriculture', label: 'Agriculture',     color: 'bg-[#2D5016]' },
   { id: 'social',      label: 'Social Impact',   color: 'bg-rose-600'  },
+  { id: 'news',        label: 'News',            color: 'bg-gray-600'  },
 ];
 
 interface Post {
