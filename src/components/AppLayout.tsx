@@ -1886,7 +1886,6 @@ const ProjectsPage: React.FC<{
 		supabase
 			.from("posts")
 			.select("*")
-			.eq("section", "projects")
 			.eq("status", "published")
 			.order("created_at", { ascending: false })
 			.then(({ data }) => setAdminPosts(data || []));
@@ -2403,10 +2402,13 @@ const ContactPage: React.FC<{
 					message: formData.message,
 				}]);
 
-			if (dbError) throw dbError;
+			if (dbError) {
+				console.error("Supabase error:", dbError.message, dbError.code);
+				throw new Error(`Supabase: ${dbError.message}`);
+			}
 
 			// Send email via EmailJS
-			await emailjs.send(
+			const emailResult = await emailjs.send(
 				import.meta.env.VITE_EMAILJS_SERVICE_ID,
 				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
 				{
@@ -2420,14 +2422,16 @@ const ContactPage: React.FC<{
 				import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 			);
 
+			console.log("EmailJS result:", emailResult.status, emailResult.text);
+
 			// Success
 			setIsSubmitted(true);
 			setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
 			setTimeout(() => setIsSubmitted(false), 5000);
 
-		} catch (error) {
-			console.error("Submission error:", error);
-			alert("Something went wrong. Please contact us directly on WhatsApp: +220 731 1727");
+		} catch (error: any) {
+			console.error("Submission error:", error?.message || error);
+			alert(`Something went wrong: ${error?.message || "Unknown error"}. Please contact us directly on WhatsApp: +220 731 1727`);
 		} finally {
 			setIsSubmitting(false);
 		}
