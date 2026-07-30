@@ -1870,6 +1870,7 @@ const ProjectsPage: React.FC<{
 }> = ({ setCurrentPage, ps }) => {
 	const [activeFilter, setActiveFilter] = useState("all");
 	const [adminPosts, setAdminPosts] = React.useState<any[]>([]);
+	const [selectedPost, setSelectedPost] = useState<any | null>(null);
 
 	const categories = [
 		{ id: "all", name: "All Projects" },
@@ -2032,7 +2033,8 @@ const ProjectsPage: React.FC<{
 			month: "short",
 			year: "numeric",
 		}),
-		description: post.excerpt || post.content?.replace(/<[^>]+>/g, "") || "",
+		description: post.excerpt || "",
+		content: post.content || "",
 		impact: "",
 		isAdmin: true,
 	}));
@@ -2110,7 +2112,7 @@ const ProjectsPage: React.FC<{
 										{categories.find((c) => c.id === project.category)?.name}
 									</span>
 								</div>
-								<div className="p-6">
+								<div className="p-6 flex flex-col">
 									<h3 className="text-xl font-bold text-gray-900 mb-2">
 										{project.title}
 									</h3>
@@ -2125,15 +2127,23 @@ const ProjectsPage: React.FC<{
 										{project.timeline}
 									</div>
 									{project.description && (
-										<p className="text-gray-600 text-sm mb-4">
+										<p className="text-gray-600 text-sm mb-4 line-clamp-3">
 											{project.description}
 										</p>
 									)}
 									{project.impact && (
-										<div className="flex items-center text-sm">
+										<div className="flex items-center text-sm mb-4">
 											<Users className="h-4 w-4 text-[#0077BE] mr-1" />
 											<span className="text-gray-600">{project.impact}</span>
 										</div>
+									)}
+									{(project as any).isAdmin && (project as any).content && (
+										<button
+											onClick={() => setSelectedPost(project)}
+											className="mt-auto inline-flex items-center gap-1 px-4 py-2 bg-[#0077BE] text-white text-sm font-medium rounded-lg hover:bg-[#005a8f] transition-colors"
+										>
+											Read Full Story <ArrowRight className="h-4 w-4" />
+										</button>
 									)}
 								</div>
 							</div>
@@ -2141,6 +2151,85 @@ const ProjectsPage: React.FC<{
 					</div>
 				</div>
 			</section>
+
+			{/* ── Full Post Modal ── */}
+			{selectedPost && (
+				<div
+					className="fixed inset-0 z-50 flex items-start justify-center bg-black/60 backdrop-blur-sm overflow-y-auto py-8 px-4"
+					onClick={(e) => { if (e.target === e.currentTarget) setSelectedPost(null); }}
+				>
+					<div className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl my-auto overflow-hidden">
+						{/* Featured image */}
+						{selectedPost.image && (
+							<div className="relative h-72 overflow-hidden">
+								<img
+									src={selectedPost.image}
+									alt={selectedPost.title}
+									className="w-full h-full object-cover"
+								/>
+								<div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+								<span className={`absolute top-4 left-4 px-3 py-1 text-white text-xs font-medium rounded-full ${selectedPost.category === "water" ? "bg-[#0077BE]" : selectedPost.category === "realestate" ? "bg-[#2D5016]" : selectedPost.category === "agriculture" ? "bg-[#1a5f2a]" : selectedPost.category === "news" ? "bg-[#4A6741]" : "bg-[#1a3a6b]"}`}>
+									{categories.find((c) => c.id === selectedPost.category)?.name}
+								</span>
+							</div>
+						)}
+						{/* Content */}
+						<div className="p-8">
+							{/* Meta */}
+							<div className="flex items-center gap-3 text-sm text-gray-500 mb-4">
+								<Calendar className="h-4 w-4" />
+								<span>{selectedPost.timeline}</span>
+								{selectedPost.location && (
+									<>
+										<span className="text-gray-300">|</span>
+										<MapPin className="h-4 w-4" />
+										<span>{selectedPost.location}</span>
+									</>
+								)}
+							</div>
+							{/* Title */}
+							<h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+								{selectedPost.title}
+							</h2>
+							{/* Excerpt */}
+							{selectedPost.description && (
+								<p className="text-gray-600 text-base leading-relaxed mb-6 pb-6 border-b border-gray-100 italic">
+									{selectedPost.description}
+								</p>
+							)}
+							{/* Full HTML content */}
+							<div
+								className="prose prose-base max-w-none text-gray-700 prose-headings:text-gray-900 prose-headings:font-bold prose-a:text-[#0077BE] prose-img:rounded-xl"
+								dangerouslySetInnerHTML={{ __html: (selectedPost as any).content }}
+							/>
+							{/* Impact */}
+							{selectedPost.impact && (
+								<div className="flex items-center gap-2 mt-6 pt-6 border-t border-gray-100 text-sm text-gray-600">
+									<Users className="h-4 w-4 text-[#0077BE]" />
+									<span>{selectedPost.impact}</span>
+								</div>
+							)}
+							{/* Close button */}
+							<div className="flex justify-between items-center mt-8 pt-6 border-t border-gray-100">
+								<button
+									onClick={() => setSelectedPost(null)}
+									className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium"
+								>
+									<ChevronLeft className="h-4 w-4" /> Back to Projects
+								</button>
+								<a
+									href={`https://wa.me/2207311727?text=Hello,%20I%20read%20about%20${encodeURIComponent(selectedPost.title)}%20and%20would%20like%20to%20know%20more.`}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] text-white rounded-lg hover:bg-[#1da851] transition-colors text-sm font-medium"
+								>
+									<MessageCircle className="h-4 w-4" /> Inquire on WhatsApp
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			)}
 
 			<section className="py-16 bg-white text-center">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
