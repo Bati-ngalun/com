@@ -3,10 +3,14 @@ import React from 'react';
 import AppLayout from '@/components/AppLayout';
 import { AppProvider } from '@/contexts/AppContext';
 
-const Index: React.FC = () => {
+interface IndexProps {
+  page?: string;
+}
+
+const Index: React.FC<IndexProps> = ({ page = "home" }) => {
   return (
     <AppProvider>
-      <AppLayout />
+      <AppLayout initialPage={page} />
     </AppProvider>
   );
 };
