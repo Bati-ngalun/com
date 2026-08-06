@@ -19,7 +19,7 @@ import {
 	Home,
 	Leaf,
 	Heart,
-	ArrowRight,
+	ArrowRight, 
 	Users,
 	Target,
 	Eye,
