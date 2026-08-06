@@ -2944,7 +2944,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ initialPage = "home" }) => {
 			default:
 				return <HomePage setCurrentPage={setCurrentPage} ps={ps} />;
 		}
-	};
+	}; 
 
 	return (
 		<div className="min-h-screen flex flex-col bg-white">
