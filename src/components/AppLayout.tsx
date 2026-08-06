@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useAppContext } from "@/contexts/AppContext";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { supabase } from "@/lib/supabase";
@@ -2886,16 +2887,29 @@ const ContactPage: React.FC<{
 };
 
 // Main AppLayout Component
-const AppLayout: React.FC = () => {
+interface AppLayoutProps {
+	initialPage?: string;
+}
+
+const AppLayout: React.FC<AppLayoutProps> = ({ initialPage = "home" }) => {
 	const { sidebarOpen, toggleSidebar } = useAppContext();
 	const isMobile = useIsMobile();
-	const [currentPage, setCurrentPage] = useState("home");
+	const navigate = useNavigate();
+	const location = useLocation();
 	const ps = usePageSettings();
 
-	// Scroll to top when page changes
+	// Derive current page from URL hash path
+	const currentPage = location.pathname.replace("/", "") || initialPage || "home";
+
+	// Navigate using React Router — updates the URL
+	const setCurrentPage = (page: string) => {
+		navigate(page === "home" ? "/" : `/${page}`);
+	};
+
+	// Scroll to top on every page change
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [currentPage]);
+	}, [location.pathname]);
 
 	const renderPage = () => {
 		switch (currentPage) {
