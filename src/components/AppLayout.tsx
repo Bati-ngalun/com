@@ -265,6 +265,7 @@ const Footer: React.FC<{ setCurrentPage: (page: string) => void }> = ({
 								src={IMAGES.logo}
 								alt="Bati-Ngalun"
 								className="h-12 w-auto bg-white rounded-lg p-1"
+								loading="lazy"
 							/>
 							<div>
 								<h3 className="font-bold text-lg">BATI-NGALUN</h3>
@@ -521,6 +522,7 @@ const SectionPosts: React.FC<{ section: string; title?: string }> = ({
 									<img
 										src={post.featured_image_url}
 										alt={post.title}
+										loading="lazy"
 										className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
 									/>
 								</div>
@@ -744,8 +746,8 @@ const HomePage: React.FC<{
 						<img
 							src={slide.image}
 							alt={slide.title}
-							/* Changed h-auto to h-full and object-contain to object-cover */
 							className="w-full h-full object-cover object-top"
+							{...(index === 0 ? { fetchPriority: "high" as any } : { loading: "lazy" as any })}
 						/>
 						{/* The gradient overlay below ensures your white text remains readable over the image */}
 						<div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
@@ -754,7 +756,7 @@ const HomePage: React.FC<{
 				<div className="absolute inset-0 flex items-center">
 					<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 						<div className="max-w-2xl">
-							<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+							<h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
 								Sustainable Water, Real Estate & Agricultural Solutions for
 								Africa
 							</h1>
@@ -895,6 +897,7 @@ const HomePage: React.FC<{
 									<img
 										src={project.image}
 										alt={project.title}
+										loading="lazy"
 										className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
 									/>
 									<span className="absolute top-4 left-4 px-3 py-1 bg-[#0077BE] text-white text-xs font-medium rounded-full">
@@ -1052,7 +1055,7 @@ const AboutPage: React.FC<{
 		<div>
 			<section className="relative py-20 bg-gradient-to-r from-[#1a5f2a] to-[#0077BE]">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+					<h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
 						{ps.get("about", "hero_title", "About Us")}
 					</h1>
 					<p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -1093,6 +1096,7 @@ const AboutPage: React.FC<{
 							<img
 								src={ps.get("about", "hero_image", IMAGES.community1)}
 								alt="About us"
+								loading="lazy"
 								className="rounded-xl shadow-lg"
 							/>
 							<div className="absolute -bottom-6 -left-6 bg-[#0077BE] text-white p-6 rounded-xl shadow-lg">
@@ -1183,6 +1187,7 @@ const AboutPage: React.FC<{
 							<img
 								src={IMAGES.team}
 								alt="Leadership Team"
+								loading="lazy"
 								className="w-full h-auto object-contain"
 							/>
 							<div className="p-8">
@@ -1318,6 +1323,7 @@ const WaterworksPage: React.FC<{
 							<img
 								src={ps.get("waterworks", "hero_image", IMAGES.borehole1)}
 								alt="Borehole Drilling"
+								loading="lazy"
 								className="rounded-xl shadow-2xl"
 							/>
 						</div>
@@ -1468,6 +1474,7 @@ const RealEstatePage: React.FC<{
 							<img
 								src={ps.get("realestate", "hero_image", IMAGES.ecovillage1)}
 								alt="Eco-Village"
+								loading="lazy"
 								className="rounded-xl shadow-2xl"
 							/>
 						</div>
@@ -1617,6 +1624,7 @@ const AgriculturePage: React.FC<{
 							<img
 								src={ps.get("agriculture", "hero_image", IMAGES.agricHompage1)}
 								alt="Agricultural Irrigation"
+								loading="lazy"
 								className="rounded-xl shadow-2xl"
 							/>
 						</div>
@@ -1763,6 +1771,7 @@ const FoundationPage: React.FC<{
 							<img
 								src={ps.get("foundation", "hero_image", IMAGES.community1)}
 								alt="Community Impact"
+								loading="lazy"
 								className="rounded-xl shadow-2xl"
 							/>
 						</div>
@@ -2052,7 +2061,7 @@ const ProjectsPage: React.FC<{
 		<div>
 			<section className="relative py-20 bg-gradient-to-r from-[#1a5f2a] to-[#0077BE]">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+					<h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
 						{ps.get("projects", "hero_title", "Our Projects")}
 					</h1>
 					<p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -2100,6 +2109,7 @@ const ProjectsPage: React.FC<{
 										<img
 											src={project.image}
 											alt={project.title}
+											loading="lazy"
 											className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
 										/>
 									) : (
@@ -2292,7 +2302,7 @@ const CareersPage: React.FC<{
 		<div>
 			<section className="relative py-20 bg-gradient-to-r from-[#1a5f2a] to-[#0077BE]">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+					<h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
 						{ps.get("careers", "hero_title", "Join Our Team")}
 					</h1>
 					<p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -2562,7 +2572,7 @@ const ContactPage: React.FC<{
 		<div>
 			<section className="relative py-20 bg-gradient-to-r from-[#1a5f2a] to-[#0077BE]">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+					<h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
 						{ps.get("contact", "hero_title", "Contact Us")}
 					</h1>
 					<p className="text-xl text-white/90 max-w-3xl mx-auto">
