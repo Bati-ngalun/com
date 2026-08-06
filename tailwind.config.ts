@@ -66,8 +66,9 @@ export default {
         }
       },
       fontFamily: {
-        mono: ['JetBrains Mono', 'monospace'],
-        sans: ['Inter', 'sans-serif'],
+        mono:    ['JetBrains Mono', 'monospace'],
+        sans:    ['Inter', 'sans-serif'],
+        display: ['DM Serif Display', 'serif'],
       },
       borderRadius: {
         lg: 'calc(var(--radius) + 2px)',
