@@ -11,7 +11,7 @@ import {
 	MessageCircle,
 	Mail,
 	MapPin,
-	Clock,
+	Clock,	
 	Send,
 	CheckCircle,
 	Droplets,
@@ -756,7 +756,7 @@ const HomePage: React.FC<{
 				<div className="absolute inset-0 flex items-center">
 					<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 						<div className="max-w-2xl">
-							<h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
+							<h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}>
 								Sustainable Water, Real Estate & Agricultural Solutions for
 								Africa
 							</h1>
@@ -1055,7 +1055,7 @@ const AboutPage: React.FC<{
 		<div>
 			<section className="relative py-20 bg-gradient-to-r from-[#1a5f2a] to-[#0077BE]">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-4">
+					<h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
 						{ps.get("about", "hero_title", "About Us")}
 					</h1>
 					<p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -2061,7 +2061,7 @@ const ProjectsPage: React.FC<{
 		<div>
 			<section className="relative py-20 bg-gradient-to-r from-[#1a5f2a] to-[#0077BE]">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-4">
+					<h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
 						{ps.get("projects", "hero_title", "Our Projects")}
 					</h1>
 					<p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -2302,7 +2302,7 @@ const CareersPage: React.FC<{
 		<div>
 			<section className="relative py-20 bg-gradient-to-r from-[#1a5f2a] to-[#0077BE]">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-4">
+					<h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
 						{ps.get("careers", "hero_title", "Join Our Team")}
 					</h1>
 					<p className="text-xl text-white/90 max-w-3xl mx-auto">
@@ -2572,7 +2572,7 @@ const ContactPage: React.FC<{
 		<div>
 			<section className="relative py-20 bg-gradient-to-r from-[#1a5f2a] to-[#0077BE]">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-4">
+					<h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">
 						{ps.get("contact", "hero_title", "Contact Us")}
 					</h1>
 					<p className="text-xl text-white/90 max-w-3xl mx-auto">
