@@ -13,7 +13,7 @@ import {
 	MapPin,
 	Clock,
 	Send,
-	CheckCircle,
+	CheckCircle, 
 	Droplets,
 	Sprout,
 	Home,
