@@ -15,7 +15,7 @@ const App = () => (
   <ThemeProvider defaultTheme="light">
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
+        <Toaster /> 
         <Sonner />
         <HashRouter>
           <Routes>
